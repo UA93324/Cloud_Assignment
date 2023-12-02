@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en" ng-app="Dashboard">
+  <head>
+    <meta charset="UTF-8">
+
+    <title>Images DB</title>
+
+      <link rel="stylesheet" type="text/css" href="CSS/bootstrap.min.css">
+      <script type="text/javascript" src="JS/bootstrap.js"></script>
+      <script type="text/javascript" src="JS/bootstrap.bundle.min.js"></script>
+      <script type="text/javascript" src="JS/jquery-3.6.0.min.js"></script>
+      <script type="text/javascript" src="JS/app.js"></script>
+
+  </head>
+  
+  <body>
+
+    <div class="container">
+
+      <!-- Header -->
+      <div class="row align-items-start">
+          <div class="col-2"></div>
+
+          <div class="col-80" style="text-align: center; background-color: rgb(252, 210, 155); padding: 20px;">
+            <h3>Images DB</h3>
+          </div>
+
+          <div class="col-2"  ></div>
+      </div>
+      <!-- Header -->
+
+      <!-- New Image Area -->
+      <div class="row align-items-start">
+        <div class="col-2" ></div>
+
+          <div class="col-60" style="text-align: left;border-top:1px solid #222222; border-bottom:1px solid #222222;  padding: 20px; 
+          background-color: rgb(253, 242, 227);">
+
+            <h5>Upload an Image using the form below</h5>
+
+            <form style="font-size: 10pt;" id="newAssetForm">
+              <div class="mb-3">
+                <label for="FileName" class="form-label">File Name</label>
+                <input type="text" class="form-control" id="FileName">
+              </div>
+
+              <div class="mb-3">
+                <label for="userName" class="form-label">User Name</label>
+                <input type="text" class="form-control" id="userName">
+              </div>
+
+              <div class="mb-3">
+                <label for="userID" class="form-label">User Id</label>
+                <input type="string" class="form-control" id="userID">
+              </div>
+
+              <div class="mb-3">
+                <label for="UpFile" class="form-label">File to Upload</label>
+                <input type="file" class="form-control" id="UpFile">
+              </div>
+          
+              <button type="button" id="subNewForm" class="btn btn-primary">Upload</button> <br/><br/>
+              
+            </form>
+          </div>
+
+        <div class="col-2"></div>
+      </div>
+      <!-- New Image Area -->
+
+      <!-- view Images Area -->
+      <div class="row align-items-start">
+        <div class="col-2"></div><br>
+                
+        <!-- view All Images Area -->
+
+          <div class="col-80" style="text-align: left; background-color: rgb(253, 242, 227);border-top:1px solid #222222; border-bottom:1px solid #222222">
+            
+            <h4 style="padding-top: 20px;">Click to view all Images.</h4>
+
+            <div style="position: right, 10px; padding-bottom:10px">
+              <button id="retImages" type="button" class="btn btn-primary" style="position: relative;">View All Images</button>
+            </div>
+
+            <div id="ImageList" style="padding: 20px;"></div>
+          </div>
+
+        <!-- view All Images Area -->
+
+
+
+        <!-- view One Image Area --> 
+        <div class="row align-items-start">
+          <div class="col-2"></div><br>
+          
+          <form style="background-color: rgb(253, 242, 227); font-size: 10pt; padding: 20px; padding-top: 20px; border-top:1px solid #222222"" id="id">
+
+            <div class="mb-3">
+              <label for="id" class="form-label"><h4>View, Delete or Edit an Image.</h4> Image ID </label>
+              <input type="text" class="form-control" id="image_id">
+            </div>
+
+            <div class="col-200" style="text-align: left;" >
+              <div style="padding-top:10px">
+                <button  id="getImage" type="button" class="btn btn-primary">View image</button>
+                <button  id="deleteImage" type="button" class="btn btn-primary">Delete image</button>
+                <button  id="subEditForm" type="button" class="btn btn-primary">Edit Image</button> 
+              </div>
+            </div>
+          
+          </form>
+
+            <div id="SingleImageList" style="text-align: left; background-color: rgb(253, 242, 227); border-bottom:1px solid #222222"> </div>
+        </div>
+          <!-- view One Image Area -->
+
+          <!--Edit Image Area-->
+          <div class="row align-items-start">
+            <div class="col-2"></div><br>
+
+            <div class="col-18" style="text-align: left;border-top:1px solid #222222; border-bottom:1px solid #222222;  padding: 20px; background-color: rgb(253, 242, 227);">
+                <h4>Edit Image Form</h4>
+
+                <form style="font-size: 12pt; padding-bottom: 20px;" id="newAssetForm">
+
+                  <div class="mb-3">
+                    <label for="FileName" class="form-label">New File Name</label>
+                    <input type="text" class="form-control" id="newFileName">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="userName" class="form-label">New User Name</label>
+                    <input type="text" class="form-control" id="newuserName">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="userID" class="form-label">New User Id</label>
+                    <input type="string" class="form-control" id="newuserID">
+                  </div>
+
+                  <div class="mb-3">
+                    <label for="UpFile" class="form-label">New File to Upload</label>
+                    <input type="file" class="form-control" id="newUpFile">
+                  </div>
+
+                  <!-- <button type="button" id="subEditForm" class="btn btn-primary">Edit</button> <br/><br/> -->
+                  
+                </form>
+              </div>
+              <div class="col-2"  ></div>
+          </div>
+          <!--Edit Image Area-->
+
+            <br>
+        </div>
+    </div>
+
+  </body>
+
+</html>
